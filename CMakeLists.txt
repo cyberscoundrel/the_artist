@@ -15,11 +15,15 @@ find_package(SDL2 REQUIRED)
 
 find_package(GLM REQUIRED)
 
+#find_package(Threads REQUIRED)
+
+
 message(STATUS "hello")
 message(STATUS ${SDL2MAIN_LIBRARY})
 message(STATUS ${GLEW_DIR})
 message(STATUS ${CMAKE_CURRENT_BINARY_DIR})
 message(STATUS ${CMAKE_FILES_DIRECTORY})
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 if (NOT GLEW_FOUND)
 	message("ok")
 	message(OpenGL "path")
@@ -35,6 +39,8 @@ else()
 	set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin/osx)
 endif()
 add_executable(the_artist WIN32 ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp)
+
+#target_compile_options(the_artist PUBLIC "-lpthread")
 #set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 include_directories( ${OPENGL_INCLUDE_DIR} ${GLEW_INCLUDE_DIRS} ${SDL2_INCLUDE_DIR} ${GLM_INCLUDE_DIR})
