@@ -1,0 +1,9 @@
+build/*
+!build/.gitkeep
+compile_commands.json
+leg
+build/leg
+build/win/leg
+build/osx/leg
+build/linux/leg
+build/src/leg
