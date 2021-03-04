@@ -1,0 +1,27 @@
+#!/bin/bash
+
+cd ..
+
+if [ ! -d "./libs" ]; then
+    mkdir "libs"
+fi
+
+cd "libs"
+
+#Check and retrieve any necessary libraries
+if [ ! -d "./glew" ]; then
+    git clone https://github.com/nigels-com/glew.git glew
+    cd glew
+
+    #Neccessary to generate GLEW's core library
+    make extensions
+    cd ..
+fi
+
+if [ ! -d "./sdl" ]; then
+    git clone https://github.com/libsdl-org/SDL.git sdl
+fi
+
+if [ ! -d "./glm" ]; then
+    git clone https://github.com/g-truc/glm.git glm
+fi

@@ -1,0 +1,18 @@
+#!/bin/bash
+
+cd ..
+
+for argc in "$@" 
+do
+    if [ "$argc" = "s" ]; then
+        rm -rf "sandbox"
+    fi
+    
+    if [ "$argc" = "c" ]; then
+        rm -rf "cmake"
+    fi
+
+    if [ "$argc" = "l" ]; then
+        rm -rf "libs"
+    fi
+done
