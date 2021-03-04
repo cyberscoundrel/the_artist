@@ -7,3 +7,7 @@ build/win/leg
 build/osx/leg
 build/linux/leg
 build/src/leg
+spackster/build
+spackster/libs
+spackster/sandbox
+spackster/cmake
