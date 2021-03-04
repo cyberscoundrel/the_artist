@@ -26,6 +26,7 @@ target_link_libraries(${_projectName} glew_s)
 
 #GLM
 add_subdirectory(libs/glm/)
+target_include_directories(${_projectName} PRIVATE libs/glm/glm)
 target_link_libraries(${_projectName} glm)
 
 #Build executable file in sandbox directory
