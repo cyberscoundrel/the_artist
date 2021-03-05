@@ -11,3 +11,7 @@ spackster/build
 spackster/libs
 spackster/sandbox
 spackster/cmake
+.cache
+bin
+build
+cmakefiles
