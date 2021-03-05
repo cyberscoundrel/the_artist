@@ -1,4 +1,4 @@
-# Spackster's build system
+# Debugging build system
 A non-intrusive build system utilizing cmake to build projects by source with an emphasis that libraries are also linked by source. Only con is the that the CMakeLists.txt it depends on is located in this folder and will have to be updated from the parent project's. Please keep that in mind.
 ## Requirements
 This build system depends on bash. It was created and tested in Windows Subsystem for Linux. Requires:
