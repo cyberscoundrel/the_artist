@@ -7,10 +7,10 @@ build/win/leg
 build/osx/leg
 build/linux/leg
 build/src/leg
-spackster/build
-spackster/libs
-spackster/sandbox
-spackster/cmake
+debug/build
+debug/libs
+debug/sandbox
+debug/cmake
 .cache
 bin
 build
