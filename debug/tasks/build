@@ -1,0 +1,22 @@
+#!/bin/bash
+
+_useEXE=".exe"          #Set to exe if on Windows, leave empty otherwise
+_buildType="Debug"    #MSVC specific build configuration. Options: "Release" "Debug" "MinSizeRel" "RelWithDebInfo"
+
+cd ..
+
+if [ ! -d "./cmake" ]; then
+    mkdir "cmake"
+    cd "cmake"
+    "cmake"$_useEXE "../"
+    cd ..
+fi
+
+cd "cmake"
+
+if [ ! -d "./sandbox" ]; then
+    mkdir "sandbox"
+fi
+"cmake"$_useEXE  --build . --config $_buildType
+
+cd ..
