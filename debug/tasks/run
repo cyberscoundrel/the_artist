@@ -2,8 +2,10 @@
 
 cd "../sandbox"
 
-{ 
+if grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null ; then    
+    ./output.exe
+else  
     ./output
-} || {
-    ./output.exe 
-}
+fi
+
+

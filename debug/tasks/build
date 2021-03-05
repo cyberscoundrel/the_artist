@@ -1,7 +1,16 @@
 #!/bin/bash
 
-_useEXE=".exe"          #Set to exe if on Windows, leave empty otherwise
+
+
+
+
+_useEXE=""          #Set to exe if on Windows, leave empty otherwise
 _buildType="Debug"    #MSVC specific build configuration. Options: "Release" "Debug" "MinSizeRel" "RelWithDebInfo"
+
+
+if grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null ; then
+    _useEXE=".exe" 
+fi
 
 cd ..
 
